@@ -1,18 +1,30 @@
-## Getting Started
+# Vehicle Management System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Overview
+This project demonstrates core Object-Oriented Programming (OOP) concepts, including **Inheritance**, **Polymorphism**, **Interfaces**, and **Coupling**. The system models different types of vehicles (`Car`, `Motorcycle`, and `ElectricCar`) with an extensible and maintainable structure.
 
-## Folder Structure
+## Features
+- **Inheritance**: `Car`, `Motorcycle`, and `ElectricCar` extend the `Vehicle` class.
+- **Polymorphism**:
+  - Method Overriding (`start()` method in `Car`, `Motorcycle`, and `ElectricCar`).
+  - Method Overloading (`refuel()` method with different parameters).
+- **Interfaces**: `ElectricVehicle` interface implemented by `ElectricCar`.
+- **Coupling**:
+  - **Data Coupling**: `setSpeed()` method modifies the `speed` attribute.
+  - **Stamp Coupling**: `updateVehicleStatus(VehicleStatus status)` in `Car` class accepts an entire object.
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Usage
+- Create instances of different vehicle types.
+- Call methods to demonstrate polymorphism and inheritance.
+- Modify and extend the project by adding new vehicle types.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Example Usage
+```java
+Car myCar = new Car("Toyota", "Camry", 2022);
+myCar.start();
+myCar.refuel(10);
+```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
